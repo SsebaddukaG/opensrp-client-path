@@ -16,8 +16,6 @@ android:
   components:
     # tools required
     - tools
-    - platform-tools
-    - tools
     # The BuildTools version used by your project
     - build-tools-26.0.1
     # The SDK version used to compile your projects
@@ -50,8 +48,8 @@ script:
   - ls -la
   #- ./gradlew connectedAndroidTest
   #Run All tests Unit and Instrumentation
-  - travis_wait ./gradlew build --stacktrace -x testDebug -x testRelease
-  - travis_wait ./gradlew opensrp-path:clean opensrp-path:jacocoTestReport coveralls --stacktrace
+  - travis_wait ./gradlew build --full-stacktrace
+  - travis_wait ./gradlew opensrp-path:clean opensrp-path:jacocoTestReport coveralls --full-stacktrace
 
 after_failure:
  - pandoc opensrp-path/build/reports/tests/index.html -t plain
