@@ -26,6 +26,8 @@ apply plugin: 'io.fabric'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
 
+sourceCompatibility = 1.8
+
 repositories {
     maven { url 'https://maven.fabric.io/public' }
     maven { url 'https://jitpack.io' }
@@ -96,6 +98,11 @@ android {
 
     testOptions {
         unitTests.returnDefaultValues = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
