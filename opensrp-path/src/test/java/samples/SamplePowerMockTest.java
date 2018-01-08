@@ -10,13 +10,14 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 import io.ona.kujaku.BuildConfig;
+import shared.VaccinatorApplicationTestVersion;
 
 /**
  * Created by Ephraim Kigamba - ekigamba@ona.io on 08/01/2018.
  */
 @RunWith(PowerMockRunner.class)
 @PowerMockRunnerDelegate(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
+@Config(constants = BuildConfig.class, application = VaccinatorApplicationTestVersion.class)
 @PowerMockIgnore({"org.mockito.*", "org.robolectric.*", "android.*"})
 public class SamplePowerMockTest {
 
