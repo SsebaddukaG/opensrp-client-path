@@ -1,13 +1,16 @@
-package util;
+package samples;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 
 /**
  * Created by Ephraim Kigamba - ekigamba@ona.io on 08/01/2018.
  */
 
-public class SampleTest {
+@RunWith(RobolectricTestRunner.class)
+public class SampleRobolectricTest {
 
     @Test
     public void sampleTest() {
