@@ -48,6 +48,7 @@ script:
   - ls -la
   #- ./gradlew connectedAndroidTest
   #Run All tests Unit and Instrumentation
+  - ./
   - travis_wait ./gradlew build --full-stacktrace
   - travis_wait ./gradlew opensrp-path:clean opensrp-path:jacocoTestReport coveralls --full-stacktrace
 
